@@ -6,7 +6,7 @@ After building the project, the `.jar` can be executed from terminal:
 
 ```> java -jar CognitiveComplexityCalculator-1.0.jar <input directory> <output directory>\filename.csv```
 
-Where `<input directory>` represents the directory of all `.java` file to analyse, including all the files in the sub-directories.
+Where `<input directory>` represents the directory of all `.java` files to analyse, including all the files in the sub-directories.
 `<output directory>` represents the directory in which the output file is created.
 
 The output file is a `.csv` file which contains the Cognitive Complexity value for each method.
