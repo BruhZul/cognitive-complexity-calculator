@@ -31,9 +31,13 @@ public class Main {
 
             List<List<MethodResult>> result = new InputManager().computeCognitiveComplexity(inputDirectory);
 
-            new OutputManager(outputpath).generateCSVfile(result);
+            if(new OutputManager(outputpath).generateCSVfile(result)){
+                System.out.println("DONE");
+            }else{
+                System.out.println("The tool was not able to generate the .csv file. Is the output directory written correctly?");
+            }
 
-            System.out.println("DONE");
+
         }
     }
 }
