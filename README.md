@@ -10,7 +10,7 @@ Where `<input directory>` represents the directory of all `.java` files to analy
 `<output directory>` represents the directory in which the output file is created.
 
 The output file is a `.csv` file which contains the Cognitive Complexity value for each method.
-Specificically it contains:
+Specifically it contains:
 - Absolute Module Path: The path of the class containing the method
 - Module Position: The line in the `.java` file where the method starts
 - Module declaration: The method signature and return type
