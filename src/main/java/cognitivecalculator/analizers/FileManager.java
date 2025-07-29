@@ -1,6 +1,7 @@
 package cognitivecalculator.analizers;
 
 import cognitivecalculator.resultdatastr.MethodResult;
+import com.github.javaparser.ParserConfiguration;
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.NodeList;
@@ -25,6 +26,9 @@ public class FileManager {
         List<List<MethodResult>> partial = new ArrayList<>();
         List<MethodResult> result = new LinkedList<>();
         this.absolutePath = file.getAbsolutePath();
+        ParserConfiguration config = new ParserConfiguration().
+                setLanguageLevel(ParserConfiguration.LanguageLevel.JAVA_11);
+        StaticJavaParser.setConfiguration(config);
         CompilationUnit compilationUnit = StaticJavaParser.parse(file);
         NodeList<TypeDeclaration<?>> types = compilationUnit.getTypes();
         Optional<PackageDeclaration> packageDec = compilationUnit.getPackageDeclaration();
